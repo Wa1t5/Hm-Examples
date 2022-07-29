@@ -21,7 +21,7 @@ include_directories("${PROJECT_SOURCE_DIR}/Deps/Hm/Deps/SDL_image/SDL_image.h")
 endif()
 
 # Link libraries (DEBUG)
-if (CMAKE_BUILD_TYPE EQUAL MinSizeRel OR CMAKE_BUILD_TYPE EQUAL Release)
+if (CMAKE_BUILD_TYPE EQUAL Debug)
 # Hm
 link_libraries("${PROJECT_SOURCE_DIR}/Build/Deps/Hm/Hm.lib")
 include_directories("${PROJECT_SOURCE_DIR}/Deps/Hm/Include/Game.hpp")
