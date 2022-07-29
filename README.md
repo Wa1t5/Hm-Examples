@@ -10,3 +10,5 @@ cd build
 cmake -G Ninja
 ninja
 ```
+
+After building move the dlls to the root build folder
