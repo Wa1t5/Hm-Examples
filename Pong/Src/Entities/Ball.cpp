@@ -27,9 +27,6 @@ public:
     void Update() override
     {
         if (dir->_y == 0) dir->_y = -1;
-        
-        //if (pos->_x <= 0) dir->_x = 1;
-        //else if (pos->_x >= 800) dir->_x = -1;
 
         if (pos->_y <= 0) dir->_y = 1;
         else if (pos->_y >= 600) dir->_y = -1;

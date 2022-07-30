@@ -23,6 +23,10 @@ public:
     {
         if (input->IsKeyDown(SDL_SCANCODE_UP)) pos->_y -= spd;
         if (input->IsKeyDown(SDL_SCANCODE_DOWN)) pos->_y += spd;
+
+        // Limit
+        if (pos->_y <= 0) pos->_y += spd;
+        if (pos->_y >= 600 - size->_y) pos->_y -= spd;
     }
     
     void Render() override
