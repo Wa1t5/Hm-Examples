@@ -17,7 +17,7 @@ public:
 
         mainScene = new MainScene;
 
-        sceneManager->LoadScene(mainScene, game->mainRenderer, game->mainInput);
+        sceneManager->LoadScene(mainScene, game->mainRenderer, game->mainWindow, game->mainInput);
     }
 
     static void Update()

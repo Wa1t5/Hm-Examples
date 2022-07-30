@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 23)
 add_subdirectory("${PROJECT_SOURCE_DIR}/Deps/Hm")
 
 # Link libraries (RELEASE)
-if (CMAKE_BUILD_TYPE EQUAL MinSizeRel OR CMAKE_BUILD_TYPE EQUAL Release)
+if (CMAKE_BUILD_TYPE STREQUAL "MinSizeRel" OR CMAKE_BUILD_TYPE STREQUAL "Release")
 # Hm
 link_libraries("${PROJECT_SOURCE_DIR}/Build/Deps/Hm/Hm.lib")
 include_directories("${PROJECT_SOURCE_DIR}/Deps/Hm/Include/Game.hpp")
@@ -21,7 +21,7 @@ include_directories("${PROJECT_SOURCE_DIR}/Deps/Hm/Deps/SDL_image/SDL_image.h")
 endif()
 
 # Link libraries (DEBUG)
-if (CMAKE_BUILD_TYPE EQUAL Debug)
+if (CMAKE_BUILD_TYPE STREQUAL Debug)
 # Hm
 link_libraries("${PROJECT_SOURCE_DIR}/Build/Deps/Hm/Hm.lib")
 include_directories("${PROJECT_SOURCE_DIR}/Deps/Hm/Include/Game.hpp")

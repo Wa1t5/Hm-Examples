@@ -1,29 +1,29 @@
-#include "../../Deps/Hm/Include/Game.hpp"
+#include "../../../Deps/Hm/Include/Game.hpp"
 
 // Entities
 #include "../Entities/Player1.cpp"
 #include "../Entities/Player2.cpp"
 #include "../Entities/Ball.cpp"
-
+#include <iostream>
+#include <string>
 
 class MainScene : public Scene
 {
 public:
-
     Player1* player1 = nullptr;
     Player2* player2 = nullptr;
     Ball* ball = nullptr;
     int player1_points = 0;
     int player2_points = 0;
+    std::string points = "";
 
     EntityManager* entityManager = nullptr;
     float alpha = 1;
 
     void Init() override 
     {
-        std::cout << "Points:" << std::endl;
-        std::cout << "Player 1: " << player1_points << std::endl;
-        std::cout << "Player 2: " << player2_points << std::endl;
+        points = "Player1: " + std::to_string(player1_points) + " Player 2: " + std::to_string(player2_points);
+        window->SetWindowTitle(points);
 
         srand(SDL_GetTicks64());
         entityManager = new EntityManager();

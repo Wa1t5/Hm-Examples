@@ -1,5 +1,4 @@
-#include "../../Deps/Hm/Include/Game.hpp"
-#include <random>
+#include "../../../Deps/Hm/Include/Game.hpp"
 
 class Ball : public Entity
 {
@@ -12,12 +11,12 @@ public:
         pos = new Vector2(400, 300);
         dir = new Vector2(0, 0);
         size = new Vector2(20, 20);
-        spd = 14;    
+        spd = 8;    
 
         dir->_x = rand() % 2;
         dir->_y = rand() % 2;
 
-        if (dir->_x == 0) dir->_x = 1;
+        if (dir->_x == 0) dir->_x = -1;
     }
 
     void LoadResources() override
@@ -27,6 +26,8 @@ public:
 
     void Update() override
     {
+        if (dir->_y == 0) dir->_y = -1;
+        
         //if (pos->_x <= 0) dir->_x = 1;
         //else if (pos->_x >= 800) dir->_x = -1;
 
