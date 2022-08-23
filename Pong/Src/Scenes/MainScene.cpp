@@ -1,4 +1,4 @@
-#include "../../../Deps/Hm/Include/Game.hpp"
+#include "../../../Deps/Hm/include/Game.hpp"
 
 // Entities
 #include "../Entities/Player1.cpp"

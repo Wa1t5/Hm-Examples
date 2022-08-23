@@ -1,4 +1,4 @@
-#include "../../Deps/Hm/Include/Game.hpp"
+#include "../../Deps/Hm/include/Game.hpp"
 
 // Scenes
 #include "Scenes/MainScene.cpp"
@@ -30,7 +30,7 @@ public:
 
             // Main game logic
             sceneManager->UpdateScene();
-
+            
             // Rendering
             Render();
         }
